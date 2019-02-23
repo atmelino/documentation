@@ -3,23 +3,23 @@
 
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <title>Title Goes Here</title>
+    <title>Espruino</title>
 </head>
 
 <body>
 
-<a href="Espruino.html">Espruino</a>
+
+Reset Espruino:<br>
+In Web-IDE, run<br>
+<code>reset();</code><br>
 
 
-<h1>Working with Routers </h1>
 
-TP-Link TL-MR3040
+Make Espruino run code on startup:<br>
 
-is your device connected?
-client list:
-<img src="images/tplink_clients.png" width="892" height="669" alt="">
-
-
+place call in this function</br>
+<code>function onInit() {</code> </br>  
+<code>}</code>
 
 
 
