@@ -3,26 +3,14 @@
 
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <title>Title Goes Here</title>
+    <title>General Solutions</title>
 </head>
 
 <body>
 
-<a href="Espruino.html">Espruino</a>
-
-
-<h1>Working with Routers </h1>
-
-TP-Link TL-MR3040
-
-is your device connected?
-client list:
-<img src="images/tplink_clients.png" width="892" height="669" alt="">
-
-
-
-
-
+<a href="Espruino.html">Espruino</a><br>
+<a href="routers.html">Working with Routers</a><br>
+<a href="nodejs.html">Node JS</a><br>
 
 
 </body>
