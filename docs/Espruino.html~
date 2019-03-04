@@ -16,7 +16,7 @@ table, td, th {
 </head>
 
 <body>
-<h3>Run Espruino directly from Battery or Buck Converter?</h3>
+<h3>Run Espruino directly from Battery or through Buck Converter?</h3>
 <img src="images/EspruinoWifiTopPower.jpg" width="486" height="481" alt=""><br>
 <p>
 Supply voltage from one battery directly to Espruino:
