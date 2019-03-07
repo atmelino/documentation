@@ -1,0 +1,1069 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 6.2.0.3 (Linux)"/>
+	<meta name="created" content="2018-06-06T19:08:06.584949847"/>
+	<meta name="changed" content="2019-02-12T23:12:25.395230450"/>
+	<style type="text/css">
+		@page { size: 8.5in 11in; margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 115%; background: transparent }
+		h2 { margin-top: 0.14in; margin-bottom: 0.08in; background: transparent; page-break-after: avoid }
+		h2.western { font-family: "Liberation Sans", sans-serif; font-size: 16pt; font-weight: bold }
+		h2.cjk { font-family: "Noto Sans CJK SC Regular"; font-size: 16pt; font-weight: bold }
+		h2.ctl { font-family: "Lohit Devanagari"; font-size: 16pt; font-weight: bold }
+		h1 { margin-bottom: 0.08in; background: transparent; page-break-after: avoid }
+		h1.western { font-family: "Liberation Sans", sans-serif; font-size: 18pt; font-weight: bold }
+		h1.cjk { font-family: "Noto Sans CJK SC Regular"; font-size: 18pt; font-weight: bold }
+		h1.ctl { font-family: "Lohit Devanagari"; font-size: 18pt; font-weight: bold }
+		a:link { color: #000080; so-language: zxx; text-decoration: underline }
+	</style>
+</head>
+<body lang="en-US" link="#000080" vlink="#800000" dir="ltr"><p style="margin-bottom: 0in; line-height: 100%">
+<br/>
+
+</p>
+<div id="Table of Contents1" dir="ltr">
+	<div id="Table of Contents1_Head" dir="ltr"><p style="margin-top: 0.17in; margin-bottom: 0.08in; line-height: 100%; page-break-after: avoid">
+		<font face="Liberation Sans, sans-serif"><font size="4" style="font-size: 16pt"><b>Table
+		of Contents</b></font></font></p>
+	</div>
+	<p style="margin-bottom: 0in; line-height: 100%"><a href="#__RefHeading___Toc592_3679804821">Overview	1</a></p>
+	<p style="margin-bottom: 0in; line-height: 100%"><a href="#__RefHeading___Toc599_3679804821">Installation	1</a></p>
+	<p style="margin-bottom: 0in; line-height: 100%"><a href="#__RefHeading___Toc601_3679804821">Steps	2</a></p>
+	<p style="margin-left: 0.2in; margin-bottom: 0in; line-height: 100%">
+	<a href="#__RefHeading___Toc603_3679804821">Circuit Design	2</a></p>
+	<p style="margin-left: 0.2in; margin-bottom: 0in; line-height: 100%">
+	<a href="#__RefHeading___Toc605_3679804821">Board Design	4</a></p>
+	<p style="margin-left: 0.2in; margin-bottom: 0in; line-height: 100%">
+	<a href="#__RefHeading___Toc397_409030793">Autorouter	4</a></p>
+	<p style="margin-left: 0.2in; margin-bottom: 0in; line-height: 100%">
+	<a href="#__RefHeading___Toc743_87706915">Export Board Design	5</a></p>
+	<p style="margin-left: 0.2in; margin-bottom: 0in; line-height: 100%">
+	<a href="#__RefHeading___Toc609_3679804821">Generate G-Code	8</a></p>
+	<p style="margin-left: 0.2in; margin-bottom: 0in; line-height: 100%">
+	<a href="#__RefHeading___Toc611_3679804821">Autolevel	11</a></p>
+	<p style="margin-left: 0.2in; margin-bottom: 0in; line-height: 100%">
+	<a href="#__RefHeading___Toc613_3679804821">Mill PCB	12</a></p>
+	<p style="margin-bottom: 0in; line-height: 100%"><a href="#__RefHeading___Toc615_3679804821">Appendix	12</a></p>
+	<p style="margin-left: 0.2in; margin-bottom: 0in; line-height: 100%">
+	<a href="#__RefHeading___Toc403_409030793">Freerouting rules	12</a></p>
+	<p style="margin-left: 0.2in; margin-bottom: 0in; line-height: 100%">
+	<a href="#__RefHeading___Toc607_3679804821">How to make a single
+	sided board, only back?	15</a></p>
+	<p style="margin-left: 0.2in; margin-bottom: 0in; line-height: 100%">
+	<a href="#__RefHeading___Toc789_1301748737">KiCAD clone a
+	footprint	16</a></p>
+	<p style="margin-left: 0.2in; margin-bottom: 0in; line-height: 100%">
+	<a href="#__RefHeading___Toc792_1301748737">KiCAD pcbnew create
+	board edge	17</a></p>
+	<p style="margin-left: 0.2in; margin-bottom: 0in; line-height: 100%">
+	<a href="#__RefHeading___Toc987_1702605188">KiCAD clone pad
+	properties	17</a></p>
+</div>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<h1 class="western"><a name="__RefHeading___Toc592_3679804821"></a>Overview</h1>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">The entire process
+of creating a printed circuit board with isolation milling is
+described.</p>
+<p style="margin-bottom: 0in; line-height: 100%">The operating system
+is Ubuntu 18.04</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">Steps:</p>
+<p style="margin-bottom: 0in; line-height: 100%">Design a circuit
+with KiCAD 5</p>
+<p style="margin-bottom: 0in; line-height: 100%">freerouting</p>
+<p style="margin-bottom: 0in; line-height: 100%">pcb2gcode</p>
+<p style="margin-bottom: 0in; line-height: 100%">Autoleveller AE</p>
+<p style="margin-bottom: 0in; line-height: 100%">cnc.js</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<h1 class="western"><a name="__RefHeading___Toc599_3679804821"></a>Installation</h1>
+<p style="margin-bottom: 0in; line-height: 100%">KiCAD 5:</p>
+<p style="margin-bottom: 0in; line-height: 100%"><a href="http://kicad-pcb.org/download/ubuntu/">http://kicad-pcb.org/download/ubuntu/</a></p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">freeRouting.jar</p>
+<p style="margin-bottom: 0in; line-height: 100%">source:
+<a href="https://github.com/nikropht/FreeRouting/tree/master/gui">https://github.com/nikropht/FreeRouting/tree/master/gui</a></p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><a name="__RefHeading___Toc391_409030793"></a>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<h1 class="western"><a name="__RefHeading___Toc601_3679804821"></a>Steps</h1>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<h2 class="western"><a name="__RefHeading___Toc603_3679804821"></a>Circuit
+Design</h2>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p><a name="__RefHeading___Toc393_409030793"></a>Open KiCAD EESchema
+(Schematics Editor)</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">to pan: press and
+hold F4</p>
+<p style="margin-bottom: 0in; line-height: 100%">move the mouse 
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">zooming in with the
+title section enabled makes it diffuclt to see the diagram when
+zooming to fit page.</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">File→ Page
+Settings</p>
+<p style="margin-bottom: 0in; line-height: 100%">Page layout
+description file:</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">empty.kicad_wks</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><img src="toolchain_html_ad3847e49f29a4ba.png" name="Image3" align="bottom" width="665" height="486" border="0"/>
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">then change page
+size to smaller</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><img src="toolchain_html_b9cea8eea548db6e.png" name="Image4" align="bottom" width="312" height="175" border="0"/>
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">Import Parts</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">snapEDA</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">click on generate
+net list</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<h2 class="western"><a name="__RefHeading___Toc605_3679804821"></a>Board
+Design</h2>
+<p><a name="__RefHeading___Toc395_409030793"></a>Open KiCAD Pcbnew</p>
+<p style="margin-bottom: 0in; line-height: 100%">load net list</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p><a name="__RefHeading___Toc594_3679804821"></a>Trace width and
+spacing</p>
+<p><br/>
+<br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">In the process of
+routing the traces, you may need to delete the existing traces.</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">To delete all
+traces:</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">Edit → Global
+Deletions</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<h2 class="western"><a name="__RefHeading___Toc397_409030793"></a>Autorouter</h2>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<ul>
+	<li><p style="margin-bottom: 0in; line-height: 100%">KiCAD Pcbnew
+	export DSN Specctra</p>
+	<li><p style="margin-bottom: 0in; line-height: 100%">freerouting
+	import</p>
+	<li><p style="margin-bottom: 0in; line-height: 100%">autoroute</p>
+	<li><p style="margin-bottom: 0in; line-height: 100%">export Specctra
+	session file</p>
+	<li><p style="margin-bottom: 0in; line-height: 100%">KiCAD Pcbnew
+	import session  file</p>
+</ul>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">Note: When you
+change rules in KiCAD, those are not considered unless you first
+delete the rules file in freerouting.</p>
+<p style="margin-bottom: 0in; line-height: 100%">batterymonitor.rules</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><img src="toolchain_html_bf695de12f613275.png" name="Image5" align="bottom" width="665" height="460" border="0"/>
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">FreeRouting opens a
+file chooser in the user’s home directory. This adds extra steps
+every time a design is changed. Improvement?</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">cp
+batterymonitor.dsn ~</p>
+<p style="margin-bottom: 0in; line-height: 100%">java -jar
+../../../../../../applications/freeRouting/freeRouting.jar
+batterymonitor.dsn</p>
+<p style="margin-bottom: 0in; line-height: 100%">cp
+~/batterymonitor.ses .</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<h2 class="western"><a name="__RefHeading___Toc743_87706915"></a>Export
+Board Design</h2>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">Open KiCAD pcbnew.</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">File → Plot</p>
+<p style="margin-bottom: 0in; line-height: 100%"><img src="toolchain_html_427500df8d3b8578.png" name="Image8" align="bottom" width="643" height="741" border="0"/>
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">generate a single
+drill hole file:</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><img src="toolchain_html_934199f8bf46eac7.png" name="Image2" align="bottom" width="665" height="544" border="0"/>
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><a href="http://support.seeedstudio.com/knowledgebase/articles/1824574-how-to-generate-gerber-and-drill-files-from-kicad">http://support.seeedstudio.com/knowledgebase/articles/1824574-how-to-generate-gerber-and-drill-files-from-kicad</a></p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<h2 class="western"><br/>
+<br/>
+
+</h2>
+<h2 class="western" style="page-break-before: always"><a name="__RefHeading___Toc609_3679804821"></a>
+Generate G-Code</h2>
+<p><a name="__RefHeading___Toc401_409030793"></a>Open pcb2gcodeGUI</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">Input/output tab:</p>
+<p style="margin-bottom: 0in; line-height: 100%">add front gcode so
+that mounting holes are drilled</p>
+<p style="margin-bottom: 0in; line-height: 100%">add back gcode with
+actual traces</p>
+<p style="margin-bottom: 0in; line-height: 100%">add outline so that
+autoleveller knows offset from board edge for probing grid</p>
+<p style="margin-bottom: 0in; line-height: 100%">add drill file</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><img src="toolchain_html_ebe1e65bacd06209.png" name="Image11" align="bottom" width="665" height="479" border="0"/>
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">Common tab:</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">Change Movement
+height to 2 mmm</p>
+<p style="margin-bottom: 0in; line-height: 100%">Remove G64 (to
+prevent error in GRBL)</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><img src="toolchain_html_7f22b9464ae1a2fb.png" name="Image13" align="bottom" width="665" height="452" border="0"/>
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">Drill tab:</p>
+<p style="margin-bottom: 0in; line-height: 100%">set “board side
+for drilling” to back (same as traces)</p>
+<p style="margin-bottom: 0in; line-height: 100%">check single drill
+bit size to reduce tool change</p>
+<p style="margin-bottom: 0in; line-height: 100%">check “Remove G81”
+because GRBL and TinyG do not support canned cycles</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><img src="toolchain_html_1b4cbcb912f51399.png" name="Image12" align="bottom" width="665" height="479" border="0"/>
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<h2 class="western"><br/>
+<br/>
+
+</h2>
+<h2 class="western" style="page-break-before: always"><a name="__RefHeading___Toc611_3679804821"></a>
+Autolevel</h2>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<ul>
+	<li><p style="margin-bottom: 0in; line-height: 100%">import your PCB
+	gcode into Autoleveller AE</p>
+	<li><p style="margin-bottom: 0in; line-height: 100%">generate
+	probing gcode with Probe File Generator</p>
+	<li><p style="margin-bottom: 0in; line-height: 100%">run probe file
+	in cnc.js</p>
+	<li><p style="margin-bottom: 0in; line-height: 100%">save probing
+	results as Raw Probe File</p>
+	<li><p style="margin-bottom: 0in; line-height: 100%">load Raw Probe
+	File in Autoleveller AE</p>
+	<li><p style="margin-bottom: 0in; line-height: 100%">generate
+	autolevelled PCB gcode</p>
+	<li><p style="margin-bottom: 0in; line-height: 100%">run
+	autolevelled PCB gcode on your PCB in cnc.js.</p>
+	<p style="margin-bottom: 0in; line-height: 100%"></p>
+</ul>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><img src="toolchain_html_238576996552de9b.png" name="Image1" align="bottom" width="665" height="447" border="0"/>
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">If the physical PCB
+is exactly the size of the designed board, enter insets so that the
+probing does not start at the edge of the board.</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">The probing grid
+file that is generated by Autoleveller does not work unedited with
+cnc.js.</p>
+<p style="margin-bottom: 0in; line-height: 100%">Simply remove the
+initial comment section.</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<h2 class="western"><a name="__RefHeading___Toc613_3679804821"></a>Mill
+PCB</h2>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">open cnc.js</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">load gcode 
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">&gt; G64 P0.01000 (
+set maximum deviation from commanded toolpath ) (line=26)</p>
+<p style="margin-bottom: 0in; line-height: 100%">error:20
+(Unsupported command)</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">ALARM:1 (Hard limit)</p>
+<p style="margin-bottom: 0in; line-height: 100%">[MSG:Reset to
+continue]</p>
+<p style="margin-bottom: 0in; line-height: 100%">perhaps electrical
+issue?</p>
+<p style="margin-bottom: 0in; line-height: 100%">just disable hard
+limits</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">$21=0</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">Sometimes program
+gets stuck at the end and can only be unlocked by resetting Arduino,
+which is a problem because zero position gets lost.</p>
+<p style="margin-bottom: 0in; line-height: 100%">Solution: Add M0 at
+the end of the program. When it is reached, don’t continue but</p>
+<p style="margin-bottom: 0in; line-height: 100%">Instead, move
+spindle to zero x and y.</p>
+<p style="margin-bottom: 0in; line-height: 100%">Then stop program.</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<h1 class="western"><a name="__RefHeading___Toc615_3679804821"></a>Appendix</h1>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<h2 class="western"><a name="__RefHeading___Toc403_409030793"></a>Freerouting
+rules</h2>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">(rules PCB
+batterymonitor</p>
+<p style="margin-bottom: 0in; line-height: 100%">  (snap_angle 
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">    fortyfive_degree</p>
+<p style="margin-bottom: 0in; line-height: 100%">  )</p>
+<p style="margin-bottom: 0in; line-height: 100%"> 
+(autoroute_settings</p>
+<p style="margin-bottom: 0in; line-height: 100%">    (fanout off)</p>
+<p style="margin-bottom: 0in; line-height: 100%">    (autoroute on)</p>
+<p style="margin-bottom: 0in; line-height: 100%">    (postroute on)</p>
+<p style="margin-bottom: 0in; line-height: 100%">    (vias on)</p>
+<p style="margin-bottom: 0in; line-height: 100%">    (via_costs 50)</p>
+<p style="margin-bottom: 0in; line-height: 100%">    (plane_via_costs
+5)</p>
+<p style="margin-bottom: 0in; line-height: 100%">   
+(start_ripup_costs 100)</p>
+<p style="margin-bottom: 0in; line-height: 100%">    (start_pass_no
+182)</p>
+<p style="margin-bottom: 0in; line-height: 100%">    (layer_rule F.Cu</p>
+<p style="margin-bottom: 0in; line-height: 100%">      (active off)</p>
+<p style="margin-bottom: 0in; line-height: 100%">     
+(preferred_direction horizontal)</p>
+<p style="margin-bottom: 0in; line-height: 100%">     
+(preferred_direction_trace_costs 1.0)</p>
+<p style="margin-bottom: 0in; line-height: 100%">     
+(against_preferred_direction_trace_costs 3.1)</p>
+<p style="margin-bottom: 0in; line-height: 100%">    )</p>
+<p style="margin-bottom: 0in; line-height: 100%">    (layer_rule B.Cu</p>
+<p style="margin-bottom: 0in; line-height: 100%">      (active on)</p>
+<p style="margin-bottom: 0in; line-height: 100%">     
+(preferred_direction vertical)</p>
+<p style="margin-bottom: 0in; line-height: 100%">     
+(preferred_direction_trace_costs 1.0)</p>
+<p style="margin-bottom: 0in; line-height: 100%">     
+(against_preferred_direction_trace_costs 1.5)</p>
+<p style="margin-bottom: 0in; line-height: 100%">    )</p>
+<p style="margin-bottom: 0in; line-height: 100%">  )</p>
+<p style="margin-bottom: 0in; line-height: 100%">  (rule</p>
+<p style="margin-bottom: 0in; line-height: 100%">    (width 250.0)</p>
+<p style="margin-bottom: 0in; line-height: 100%">    (clear 200.2)</p>
+<p style="margin-bottom: 0in; line-height: 100%">    (clear 125.0
+(type smd_to_turn_gap))</p>
+<p style="margin-bottom: 0in; line-height: 100%">    (clear 50.0
+(type smd_smd))</p>
+<p style="margin-bottom: 0in; line-height: 100%">  )</p>
+<p style="margin-bottom: 0in; line-height: 100%">  (padstack
+&quot;Via[0-1]_800:400_um&quot;</p>
+<p style="margin-bottom: 0in; line-height: 100%">    (shape</p>
+<p style="margin-bottom: 0in; line-height: 100%">      (circle F.Cu
+800.0 0.0 0.0)</p>
+<p style="margin-bottom: 0in; line-height: 100%">    )</p>
+<p style="margin-bottom: 0in; line-height: 100%">    (shape</p>
+<p style="margin-bottom: 0in; line-height: 100%">      (circle B.Cu
+800.0 0.0 0.0)</p>
+<p style="margin-bottom: 0in; line-height: 100%">    )</p>
+<p style="margin-bottom: 0in; line-height: 100%">    (attach off)</p>
+<ul>
+	<li><p style="margin-bottom: 0in; line-height: 100%">KiCAD Pcbnew
+	export DSN Specctra</p>
+	<li><p style="margin-bottom: 0in; line-height: 100%">freerouting
+	import</p>
+	<li><p style="margin-bottom: 0in; line-height: 100%">autoroute</p>
+	<li><p style="margin-bottom: 0in; line-height: 100%">export Specctra
+	session file</p>
+	<li><p style="margin-bottom: 0in; line-height: 100%">KiCAD Pcbnew
+	import session  file</p>
+</ul>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">  )</p>
+<p style="margin-bottom: 0in; line-height: 100%">  (via 
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">   
+&quot;Via[0-1]_800:400_um&quot; &quot;Via[0-1]_800:400_um&quot;
+default</p>
+<p style="margin-bottom: 0in; line-height: 100%">  )</p>
+<p style="margin-bottom: 0in; line-height: 100%">  (via 
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">   
+&quot;Via[0-1]_800:400_um-kicad_default&quot; &quot;Via[0-1]_800:400_um&quot;
+&quot;kicad_default&quot;</p>
+<p style="margin-bottom: 0in; line-height: 100%">  )</p>
+<p style="margin-bottom: 0in; line-height: 100%">  (via_rule</p>
+<p style="margin-bottom: 0in; line-height: 100%">    default
+&quot;Via[0-1]_800:400_um&quot;</p>
+<p style="margin-bottom: 0in; line-height: 100%">  )</p>
+<p style="margin-bottom: 0in; line-height: 100%">  (via_rule</p>
+<p style="margin-bottom: 0in; line-height: 100%">    &quot;kicad_default&quot;
+&quot;Via[0-1]_800:400_um-kicad_default&quot;</p>
+<p style="margin-bottom: 0in; line-height: 100%">  )</p>
+<p style="margin-bottom: 0in; line-height: 100%">  (class default</p>
+<p style="margin-bottom: 0in; line-height: 100%">    (clearance_class
+default)</p>
+<p style="margin-bottom: 0in; line-height: 100%">    (via_rule
+default)</p>
+<p style="margin-bottom: 0in; line-height: 100%">    (rule</p>
+<p style="margin-bottom: 0in; line-height: 100%">      (width 250.0)</p>
+<p style="margin-bottom: 0in; line-height: 100%">    )</p>
+<p style="margin-bottom: 0in; line-height: 100%">    (circuit 
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">      (use_layer
+F.Cu B.Cu)</p>
+<p style="margin-bottom: 0in; line-height: 100%">    )</p>
+<p style="margin-bottom: 0in; line-height: 100%">  )</p>
+<p style="margin-bottom: 0in; line-height: 100%">  (class
+&quot;kicad_default&quot;</p>
+<p style="margin-bottom: 0in; line-height: 100%">    &quot;Net-(IC1-Pad6)&quot;
+&quot;Net-(IC1-Pad5)&quot; &quot;Net-(BAR1-Pad13)&quot;
+&quot;Net-(BAR1-Pad14)&quot; &quot;Net-(BAR1-Pad15)&quot;
+&quot;Net-(BAR1-Pad16)&quot; &quot;Net-(BAR1-Pad12)&quot;
+&quot;Net-(BAR1-Pad11)&quot;</p>
+<p style="margin-bottom: 0in; line-height: 100%">   
+&quot;Net-(BAR1-Pad17)&quot; &quot;Net-(BAR1-Pad18)&quot;
+&quot;Net-(BAR1-Pad19)&quot; &quot;Net-(BAR1-Pad20)&quot; +BATT GND
+&quot;Net-(R3-Pad1)&quot; +5V</p>
+<p style="margin-bottom: 0in; line-height: 100%">    (clearance_class
+&quot;kicad_default&quot;)</p>
+<p style="margin-bottom: 0in; line-height: 100%">    (via_rule
+kicad_default)</p>
+<p style="margin-bottom: 0in; line-height: 100%">    (rule</p>
+<p style="margin-bottom: 0in; line-height: 100%">      (width 250.0)</p>
+<p style="margin-bottom: 0in; line-height: 100%">    )</p>
+<p style="margin-bottom: 0in; line-height: 100%">    (circuit 
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">      (use_layer
+F.Cu B.Cu)</p>
+<p style="margin-bottom: 0in; line-height: 100%">    )</p>
+<p style="margin-bottom: 0in; line-height: 100%">  )</p>
+<p style="margin-bottom: 0in; line-height: 100%">)</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<h2 class="western" style="page-break-before: always"><a name="__RefHeading___Toc607_3679804821"></a>
+How to make a single sided board, only back?</h2>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">In Pcbnew: Setup →
+Layers Setup</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><img src="toolchain_html_6f853dcc135b89f0.png" name="Image6" align="bottom" width="404" height="388" border="0"/>
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">In freeRouting:</p>
+<p style="margin-bottom: 0in; line-height: 100%">Utilities →
+Parameter → Autoroute</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><img src="toolchain_html_f953bbeefeace972.png" name="Image7" align="bottom" width="252" height="237" border="0"/>
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<h2 class="western"><a name="__RefHeading___Toc789_1301748737"></a>KiCAD
+clone a footprint</h2>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">Open footprint
+editor</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">File → Open
+Footprint</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">modify footprint as
+needed</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">File → Save 
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">Save in Library
+allows to choose new library to save in</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><img src="toolchain_html_86bb17f3c2ef5d8b.png" name="Image9" align="bottom" width="612" height="421" border="0"/>
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<h2 class="western"><a name="__RefHeading___Toc792_1301748737"></a>KiCAD
+pcbnew create board edge</h2>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">In layout manager,
+select edge.cuts</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">(blue triangle)</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><img src="toolchain_html_14e4bcd4eb27f2cf.png" name="Image10" align="bottom" width="163" height="49" border="0"/>
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%">Use Add graphic
+lines to draw board edge</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<p style="margin-bottom: 0in; line-height: 100%"><br/>
+
+</p>
+<h2 class="western"><a name="__RefHeading___Toc987_1702605188"></a>KiCAD
+clone pad properties</h2>
+<p><br/>
+<br/>
+
+</p>
+<p>-Right click on the modified pad -&gt; Pads-&gt;Copy pad settings</p>
+<p>-Right click on a NON-modified pad you want to modify -&gt;Pads -&gt;
+Apply (or Push for several) pad settings</p>
+<p><br/>
+<br/>
+
+</p>
+<p><a href="https://forum.kicad.info/t/how-do-you-edit-several-pads-at-once-in-footprint-editor/9209">https://forum.kicad.info/t/how-do-you-edit-several-pads-at-once-in-footprint-editor/9209</a></p>
+<p><br/>
+<br/>
+
+</p>
+</body>
+</html>
