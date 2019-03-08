@@ -1066,9 +1066,17 @@ Apply (or Push for several) pad settings</p>
 
 <h2 class="western"><a name="__RefHeading___Toc987_1702605188"></a>KiCAD
 convert board to footprint</h2>
+<a href="https://forum.kicad.info/t/converting-board-to-footprint/2781" >https://forum.kicad.info/t/converting-board-to-footprint/2781</a><br>
+<a href="http://linuxg.net/how-to-install-freecad-0-17-on-ubuntu-18-10-ubuntu-18-04-and-derivative-systems/"
+ >http://linuxg.net/how-to-install-freecad-0-17-on-ubuntu-18-10-ubuntu-18-04-and-derivative-systems/</a><br>
 
-http://linuxg.net/how-to-install-freecad-0-17-on-ubuntu-18-10-ubuntu-18-04-and-derivative-systems/
 
+<h2>Create your own library</h2>
+In main program:<br>
+click on Symbol library editor<br>
+Click on File -> New Library<br>
+Click on Preferences -> Manage Symbol libraries<br>
+On Global Libraries, Append your library
 
 
 </body>
