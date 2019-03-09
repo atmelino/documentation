@@ -16,6 +16,13 @@ table, td, th {
 </head>
 
 <body>
+<h3>Connecting to Espruino</h3>
+
+
+
+
+
+
 <h3>Run Espruino directly from Battery or through Buck Converter?</h3>
 <img src="images/EspruinoWifiTopPower.jpg" width="486" height="481" alt=""><br>
 <p>
@@ -111,7 +118,7 @@ Method 3: SD card connector on PCB<br>
 (yes but it's SMD)<br>
 
 Method 4: SD card connector on breakout board without additional parts<br>
-
+<img src="images/MicroSDConnectorTHT.jpg" width="600" height="232" alt="">
 <br>
 
 
