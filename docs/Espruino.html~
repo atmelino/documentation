@@ -17,10 +17,19 @@ table, td, th {
 
 <body>
 <h3>Connecting to Espruino</h3>
+<p>
+Sometimes, it helps to close Web IDE, open minicom (keep trying until no longer device busy message) hitreturn a few times. Then close minicom, open Web IDE and try connecting again.
+</p>
+<h3>Autostart Code</h3>
+<p>
+When the project is deployed, we want the code to start when the Espruino is powered on, not needing to start it from within the Web IDE.
+In the Web IDE, set the following options:<br>
+Modules loaded as Functions
+Save on Send Direct to Flash<br>
 
 
-
-
+    <a href="images/EspruinosettingsSaveCode.png"> <img src="images/EspruinosettingsSaveCode.png" width="600" alt=""></a>
+</p>
 
 
 <h3>Run Espruino directly from Battery or through Buck Converter?</h3>
