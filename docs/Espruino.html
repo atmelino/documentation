@@ -2,136 +2,188 @@
 <html lang="en">
 
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <title>Espruino</title>
-    <style>
-table {
-  border-collapse: collapse;
-}
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Espruino</title>
+  <style>
+    table {
+      border-collapse: collapse;
+    }
 
-table, td, th {
-  border: 1px solid black;
-}
-</style>
+    table,
+    td,
+    th {
+      border: 1px solid black;
+    }
+  </style>
 </head>
 
 <body>
-<h3>Connecting to Espruino</h3>
-<p>
-Sometimes, it helps to close Web IDE, open minicom (keep trying until no longer device busy message) hitreturn a few times. Then close minicom, open Web IDE and try connecting again.
-</p>
-<h3>Autostart Code</h3>
-<p>
-When the project is deployed, we want the code to start when the Espruino is powered on, not needing to start it from within the Web IDE.
-In the Web IDE, set the following options:<br>
-Modules loaded as Functions<br>
-Save on Send Direct to Flash<br>
+  <h3>Connecting to Espruino</h3>
+  <p>
+
+    Troubleshoot:<br>
+    <p>Sometimes, it helps to close Web IDE, open minicom (keep trying until no longer device busy message) hitreturn a
+      few times. Then close minicom, open Web IDE and try connecting again.
+    </p>
+    <p>
+      If that doesn't help, try<br>
+      <code>sudo minicom</code><br>
+      After that, it may connect as regular user again.
+    </p>
+    <h3>Autostart Code</h3>
+    <p>
+      When the project is deployed, we want the code to start when the Espruino is powered on, not needing to start it
+      from within the Web IDE.
+      In the Web IDE, set the following options:<br>
+      Modules loaded as Functions<br>
+      Save on Send Direct to Flash<br>
 
 
-    <a href="images/EspruinosettingsSaveCode.png"> <img src="images/EspruinosettingsSaveCode.png" width="600" alt=""></a>
-</p>
+      <a href="images/EspruinosettingsSaveCode.png"> <img src="images/EspruinosettingsSaveCode.png" width="600"
+          alt=""></a>
+    </p>
 
 
-<h3>Run Espruino directly from Battery or through Buck Converter?</h3>
-<img src="images/EspruinoWifiTopPower.jpg" width="486" height="481" alt=""><br>
-<p>
-Supply voltage from one battery directly to Espruino:
-<table >
-<tr>
-<td>U</td>
-<td>P</td>
-</tr>
-<tr>
-<td>3.7 V</td>
-<td>0.09 W</td>
-</tr>
-<tr>
-<td>4.2 V</td>
-<td>0.12 W</td>
-</tr>
-</table>
-</p>
-<p>
-Supply voltage from batteries through Buck Converter to Espruino:<br>
-<img src="images/RioRand.png" width="434" height="213" alt="">
-<table >
-<tr>
-<td>U in</td>
-<td>U out</td>
-<td>P</td>
-</tr>
-<tr>
-<td>8.0 V</td>
-<td>3.3 V</td>
-<td>0.15 W</td>
-</tr>
-<tr>
-<td>4.0 V</td>
-<td>3.3 V</td>
-<td>0.18 W</td>
-</tr>
-</table>
-</p>
+    <h3>Run Espruino directly from Battery or through Buck Converter?</h3>
+    <img src="images/EspruinoWifiTopPower.jpg" width="486" height="481" alt=""><br>
+    <p>
+      Supply voltage from one battery directly to Espruino:
+      <table>
+        <tr>
+          <td>U</td>
+          <td>P</td>
+        </tr>
+        <tr>
+          <td>3.7 V</td>
+          <td>0.09 W</td>
+        </tr>
+        <tr>
+          <td>4.2 V</td>
+          <td>0.12 W</td>
+        </tr>
+      </table>
+    </p>
+    <p>
+      Supply voltage from batteries through Buck Converter 1 to Espruino:<br>
+      <img src="images/RioRand.png" width="434" height="213" alt="">
+      <table>
+        <tr>
+          <td>U in</td>
+          <td>U out</td>
+          <td>P</td>
+        </tr>
+        <tr>
+          <td>8.0 V</td>
+          <td>3.3 V</td>
+          <td>0.15 W</td>
+        </tr>
+        <tr>
+          <td>4.0 V</td>
+          <td>3.3 V</td>
+          <td>0.18 W</td>
+        </tr>
+      </table>
+    </p>
 
-<h3>Useful commands in Web-IDE</h3>
-<p>
-Reset Espruino:<br>
-run<br>
-<code>reset();</code><br>
-</p>
+    <p>
+      Supply voltage from batteries through Buck Converter 2 to Espruino:<br>
+      <img src="images/" width="434" alt="">
+      <table>
+        <tr>
+          <td>U in</td>
+          <td>U out</td>
+          <td>P</td>
+        </tr>
+        <tr>
+          <td>8.0 V</td>
+          <td>3.3 V</td>
+          <td>0.09 W</td>
+        </tr>
+      </table>
+    </p>
+    <p>
+      Supply voltage from batteries through Buck Converter 3 to Espruino:<br>
+(with power LED on)<br>
+      <a href="https://www.amazon.com/gp/product/B07C2QF1T1"> <img src="images/buck3.jpg" width="400" alt=""></a>
+      <table>
+        <tr>
+          <td>U in</td>
+          <td>U out</td>
+          <td>P</td>
+        </tr>
+        <tr>
+          <td>8.0 V</td>
+          <td>3.3 V</td>
+          <td>0.10 W</td>
+        </tr>
+      </table>
+    </p>
 
-<p>
-Remove modules from Flash:<br>
-run<br>
-<code>reset();</code><br>
-<code>save();</code><br>
-</p>
 
-<p>
-Save code in Flash so that it is available after powerup:<br>
-run<br>
-<code>save();</code><br>
-</p>
 
-<p>
-autostart code on startup:<br>
-place call in this function</br>
-<code>function onInit() {</br>  
+
+
+    <h3>Useful commands in Web-IDE</h3>
+    <p>
+      Reset Espruino:<br>
+      run<br>
+      <code>reset();</code><br>
+    </p>
+
+    <p>
+      Remove modules from Flash:<br>
+      run<br>
+      <code>reset();</code><br>
+      <code>save();</code><br>
+    </p>
+
+    <p>
+      Save code in Flash so that it is available after powerup:<br>
+      run<br>
+      <code>save();</code><br>
+    </p>
+
+    <p>
+      autostart code on startup:<br>
+      place call in this function</br>
+      <code>function onInit() {</br>  
 ..<br>
 }</code><br>
-Then issue command</br>
-<code>save();</code>
-</p>
+      Then issue command</br>
+      <code>save();</code>
+    </p>
 
 
-<h3>Load Modules from disk</h3>
-<p>
-http://forum.espruino.com/conversations/286424/
-</p>
+    <h3>Load Modules from disk</h3>
+    <p>
+      http://forum.espruino.com/conversations/286424/
+    </p>
 
 
-<h3>SD Cards</h3>
-<p>
+    <h3>SD Cards</h3>
+    <p>
 
-<a href="https://www.espruino.com/File+IO" target="https://www.espruino.com/File+IO">https://www.espruino.com/File+IO</a><br>
+      <a href="https://www.espruino.com/File+IO"
+        target="https://www.espruino.com/File+IO">https://www.espruino.com/File+IO</a><br>
 
-Method 1: Solder Micro SD adapter to wires<br>
-<img src="images/File_IO_wiring2.jpg" width="600" height="450" alt=""><br>
+      Method 1: Solder Micro SD adapter to wires<br>
+      <img src="images/File_IO_wiring2.jpg" width="600" height="450" alt=""><br>
 
-Method 2: Use Micro SD breakout board<br>
-<img src="images/AdadfruitSDcardBoard.jpg" width="726" height="560" alt=""><br>
-<a href="https://www.adafruit.com/product/254" target="https://www.adafruit.com/product/254" name="https://www.adafruit.com/product/254"></a><br>
+      Method 2: Use Micro SD breakout board<br>
+      <img src="images/AdadfruitSDcardBoard.jpg" width="726" height="560" alt=""><br>
+      <a href="https://www.adafruit.com/product/254" target="https://www.adafruit.com/product/254"
+        name="https://www.adafruit.com/product/254"></a><br>
 
-Method 3: SD card connector on PCB<br>
-<img src="images/SDcardConnectorSMD.jpg" width="356" height="249" alt=""><br>
-(yes but it's SMD)<br>
+      Method 3: SD card connector on PCB<br>
+      <img src="images/SDcardConnectorSMD.jpg" width="356" height="249" alt=""><br>
+      (yes but it's SMD)<br>
 
-Method 4: SD card connector on breakout board without additional parts<br>
-<img src="images/MicroSDConnectorTHT.jpg" width="600" height="232" alt="">
-<br>
+      Method 4: SD card connector on breakout board without additional parts<br>
+      <img src="images/MicroSDConnectorTHT.jpg" width="600" height="232" alt="">
+      <br>
 
 
-</p>
+    </p>
 
 
 
