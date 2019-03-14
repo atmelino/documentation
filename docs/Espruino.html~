@@ -103,7 +103,7 @@
     </p>
     <p>
       Supply voltage from batteries through Buck Converter 3 to Espruino:<br>
-
+(with power LED on)<br>
       <a href="https://www.amazon.com/gp/product/B07C2QF1T1"> <img src="images/buck3.jpg" width="400" alt=""></a>
       <table>
         <tr>
