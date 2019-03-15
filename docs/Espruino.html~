@@ -135,6 +135,9 @@
       run<br>
       <code>reset();</code><br>
       <code>save();</code><br>
+      or may have to use<br>
+      E.setBootCode()<br>
+      <a target="http://forum.espruino.com/conversations/256465/" >http://forum.espruino.com/conversations/256465/</a>
     </p>
 
     <p>
@@ -182,7 +185,8 @@
       <img src="images/MicroSDConnectorTHT.jpg" width="600" height="232" alt="">
       <br>
 
-
+Issues
+http://forum.espruino.com/conversations/253121/
     </p>
 
 
