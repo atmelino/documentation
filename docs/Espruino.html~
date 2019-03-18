@@ -18,7 +18,7 @@
 </head>
 
 <body>
-  <h3>Connecting to Espruino</h3>
+  <h2>Connecting to Espruino</h2>
   <p>
 
     Troubleshoot:<br>
@@ -30,7 +30,7 @@
       <code>sudo minicom</code><br>
       After that, it may connect as regular user again.
     </p>
-    <h3>Autostart Code</h3>
+    <h2>Autostart Code</h2>
     <p>
       When the project is deployed, we want the code to start when the Espruino is powered on, not needing to start it
       from within the Web IDE.
@@ -44,7 +44,7 @@
     </p>
 
 
-    <h3>Run Espruino directly from Battery or through Buck Converter?</h3>
+    <h2>Run Espruino directly from Battery or through Buck Converter?</h2>
     <img src="images/EspruinoWifiTopPower.jpg" width="486" height="481" alt=""><br>
     <p>
       Supply voltage from one battery directly to Espruino:
@@ -123,7 +123,7 @@
 
 
 
-    <h3>Useful commands in Web-IDE</h3>
+    <h2>Useful commands in Web-IDE</h2>
     <p>
       Reset Espruino:<br>
       run<br>
@@ -137,7 +137,7 @@
       <code>save();</code><br>
       or may have to use<br>
       E.setBootCode()<br>
-      <a target="http://forum.espruino.com/conversations/256465/" >http://forum.espruino.com/conversations/256465/</a>
+      <a href="http://forum.espruino.com/conversations/256465/" >http://forum.espruino.com/conversations/256465/</a>
     </p>
 
     <p>
@@ -157,13 +157,13 @@
     </p>
 
 
-    <h3>Load Modules from disk</h3>
+    <h2>Load Modules from disk</h2>
     <p>
       http://forum.espruino.com/conversations/286424/
     </p>
 
 
-    <h3>SD Cards</h3>
+    <h2>SD Cards</h2>
     <p>
 
       <a href="https://www.espruino.com/File+IO"
@@ -185,10 +185,38 @@
       <img src="images/MicroSDConnectorTHT.jpg" width="600" height="232" alt="">
       <br>
 
-Issues
-http://forum.espruino.com/conversations/253121/
-    </p>
 
+<h2>Troubleshoot</h2>
+<h3>SD card reinsert</h3>
+<p>
+<a href="http://forum.espruino.com/conversations/253121/">http://forum.espruino.com/conversations/253121/</a>
+</p>
+
+<h3>Problems after save()</h3>
+<p>
+Error message:<br>
+<code>
+Uncaught SyntaxError: Got ?[255] expected EOF
+ at line 1 col 1
+?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255]
+^
+in function called from system
+</code><br>
+<a href="http://forum.espruino.com/conversations/297591/" target="http://forum.espruino.com/conversations/297591/">http://forum.espruino.com/conversations/297591/</a>
+</p>
+to see what is in flash run<br>
+<code>dump()</code><br>
+To clear<br>
+<code>reset()</code><br>
+<code>E.setBootCode()</code><br>
+<code>save()</code><br>
+Then test with<br>
+<code>dump()</code><br>
+
+
+
+
+<br>
 
 
 
