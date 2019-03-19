@@ -31,17 +31,34 @@
       After that, it may connect as regular user again.
     </p>
     <h2>Autostart Code</h2>
-    <p>
-      When the project is deployed, we want the code to start when the Espruino is powered on, not needing to start it
-      from within the Web IDE.
-      In the Web IDE, set the following options:<br>
-      Modules loaded as Functions<br>
-      Save on Send Direct to Flash<br>
+
+    When the project is deployed, we want the code to start when the Espruino is powered on.<br>
+
+    <h3>Code structure</h3>
+    Espruino is designed such that the following function will be run automatically after start:</br>
+    <code>function onInit() {</br>
+      ..<br>
+      }</code><br>
+
+    so add this function to your code and place a call to your function inside<br>
+    <h3>Save your code in Flash</h3>
+
+    Save code in Flash so that it is available after powerup:<br>
+    run<br>
+    <code>save();</code><br>
+
+    <h3>Save Modules in Flash</h3>
+
+Make sure firmware is at least 2.0. <br>
+    In the Web IDE, set the following options:<br>
+    Modules uploaded as Functions<br>
+
+    Do not check "Save on Send Direct to Flash" because this may cause problems with code
+    staying in Flash that should not be there. (See Troubleshooting)<br>
 
 
-      <a href="images/EspruinosettingsSaveCode.png"> <img src="images/EspruinosettingsSaveCode.png" width="600"
-          alt=""></a>
-    </p>
+    <a href="images/EspruinosettingsSaveCode.png"> <img src="images/EspruinosettingsSaveCode.png" width="600" alt=""></a>
+
 
 
     <h2>Run Espruino directly from Battery or through Buck Converter?</h2>
@@ -103,7 +120,7 @@
     </p>
     <p>
       Supply voltage from batteries through Buck Converter 3 to Espruino:<br>
-(with power LED on)<br>
+      (with power LED on)<br>
       <a href="https://www.amazon.com/gp/product/B07C2QF1T1"> <img src="images/buck3.jpg" width="400" alt=""></a>
       <table>
         <tr>
@@ -137,24 +154,9 @@
       <code>save();</code><br>
       or may have to use<br>
       E.setBootCode()<br>
-      <a href="http://forum.espruino.com/conversations/256465/" >http://forum.espruino.com/conversations/256465/</a>
+      <a href="http://forum.espruino.com/conversations/256465/">http://forum.espruino.com/conversations/256465/</a>
     </p>
 
-    <p>
-      Save code in Flash so that it is available after powerup:<br>
-      run<br>
-      <code>save();</code><br>
-    </p>
-
-    <p>
-      autostart code on startup:<br>
-      place call in this function</br>
-      <code>function onInit() {</br>  
-..<br>
-}</code><br>
-      Then issue command</br>
-      <code>save();</code>
-    </p>
 
 
     <h2>Load Modules from disk</h2>
@@ -166,16 +168,14 @@
     <h2>SD Cards</h2>
     <p>
 
-      <a href="https://www.espruino.com/File+IO"
-        target="https://www.espruino.com/File+IO">https://www.espruino.com/File+IO</a><br>
+      <a href="https://www.espruino.com/File+IO" target="https://www.espruino.com/File+IO">https://www.espruino.com/File+IO</a><br>
 
       Method 1: Solder Micro SD adapter to wires<br>
       <img src="images/File_IO_wiring2.jpg" width="600" height="450" alt=""><br>
 
       Method 2: Use Micro SD breakout board<br>
       <img src="images/AdadfruitSDcardBoard.jpg" width="726" height="560" alt=""><br>
-      <a href="https://www.adafruit.com/product/254" target="https://www.adafruit.com/product/254"
-        name="https://www.adafruit.com/product/254"></a><br>
+      <a href="https://www.adafruit.com/product/254" target="https://www.adafruit.com/product/254" name="https://www.adafruit.com/product/254"></a><br>
 
       Method 3: SD card connector on PCB<br>
       <img src="images/SDcardConnectorSMD.jpg" width="356" height="249" alt=""><br>
@@ -186,38 +186,39 @@
       <br>
 
 
-<h2>Troubleshoot</h2>
-<h3>SD card reinsert</h3>
-<p>
-<a href="http://forum.espruino.com/conversations/253121/">http://forum.espruino.com/conversations/253121/</a>
-</p>
+      <h2>Troubleshoot</h2>
+      <h3>SD card reinsert</h3>
+      <p>
+        <a href="http://forum.espruino.com/conversations/253121/">http://forum.espruino.com/conversations/253121/</a>
+      </p>
 
-<h3>Problems after save()</h3>
-<p>
-Error message:<br>
-<code>
-Uncaught SyntaxError: Got ?[255] expected EOF
- at line 1 col 1
-?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255]
-^
-in function called from system
-</code><br>
-<a href="http://forum.espruino.com/conversations/297591/" target="http://forum.espruino.com/conversations/297591/">http://forum.espruino.com/conversations/297591/</a>
-</p>
-to see what is in flash run<br>
-<code>dump()</code><br>
-To clear<br>
-<code>reset()</code><br>
-<code>E.setBootCode()</code><br>
-<code>save()</code><br>
-Then test with<br>
-<code>dump()</code><br>
-and change <br>
-Save on Send Direct to Flash<br>
-to<br>
-Save on Send To RAM (Default)<br>
+      <h3>Problems after save()</h3>
+      <p>
+        Error message:<br>
+        <code>
+          Uncaught SyntaxError: Got ?[255] expected EOF
+          at line 1 col 1
+          ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255]
+          ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255]
+          ^
+          in function called from system
+        </code><br>
+        <a href="http://forum.espruino.com/conversations/297591/" target="http://forum.espruino.com/conversations/297591/">http://forum.espruino.com/conversations/297591/</a>
+      </p>
+      to see what is in flash run<br>
+      <code>dump()</code><br>
+      To clear<br>
+      <code>reset()</code><br>
+      <code>E.setBootCode()</code><br>
+      <code>save()</code><br>
+      Then test with<br>
+      <code>dump()</code><br>
+      and change <br>
+      Save on Send Direct to Flash<br>
+      to<br>
+      Save on Send To RAM (Default)<br>
 
-<br>
+      <br>
 
 
 
