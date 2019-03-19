@@ -51,7 +51,7 @@
 
 Make sure firmware is at least 2.0. <br>
     In the Web IDE, set the following options:<br>
-    Modules loaded as Functions<br>
+    Modules uploaded as Functions<br>
 
     Do not check "Save on Send Direct to Flash" because this may cause problems with code
     staying in Flash that should not be there. (See Troubleshooting)<br>
