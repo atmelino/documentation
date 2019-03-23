@@ -217,7 +217,8 @@ Make sure firmware is at least 2.0. <br>
       Save on Send Direct to Flash<br>
       to<br>
       Save on Send To RAM (Default)<br>
-
+      <h3>Program runs in Web IDE but stalls as stand-alone</h3>
+      Remove console.log and print calls<br>
       <br>
 
 
