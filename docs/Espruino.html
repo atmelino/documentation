@@ -49,7 +49,7 @@
 
     <h3>Save Modules in Flash</h3>
 
-Make sure firmware is at least 2.0. <br>
+    Make sure firmware is at least 2.0. <br>
     In the Web IDE, set the following options:<br>
     Modules uploaded as Functions<br>
 
@@ -57,7 +57,8 @@ Make sure firmware is at least 2.0. <br>
     staying in Flash that should not be there. (See Troubleshooting)<br>
 
 
-    <a href="images/EspruinosettingsSaveCode.png"> <img src="images/EspruinosettingsSaveCode.png" width="600" alt=""></a>
+    <a href="images/EspruinosettingsSaveCode.png"> <img src="images/EspruinosettingsSaveCode.png" width="600"
+        alt=""></a>
 
 
 
@@ -168,14 +169,16 @@ Make sure firmware is at least 2.0. <br>
     <h2>SD Cards</h2>
     <p>
 
-      <a href="https://www.espruino.com/File+IO" target="https://www.espruino.com/File+IO">https://www.espruino.com/File+IO</a><br>
+      <a href="https://www.espruino.com/File+IO"
+        target="https://www.espruino.com/File+IO">https://www.espruino.com/File+IO</a><br>
 
       Method 1: Solder Micro SD adapter to wires<br>
       <img src="images/File_IO_wiring2.jpg" width="600" height="450" alt=""><br>
 
       Method 2: Use Micro SD breakout board<br>
       <img src="images/AdadfruitSDcardBoard.jpg" width="726" height="560" alt=""><br>
-      <a href="https://www.adafruit.com/product/254" target="https://www.adafruit.com/product/254" name="https://www.adafruit.com/product/254"></a><br>
+      <a href="https://www.adafruit.com/product/254" target="https://www.adafruit.com/product/254"
+        name="https://www.adafruit.com/product/254"></a><br>
 
       Method 3: SD card connector on PCB<br>
       <img src="images/SDcardConnectorSMD.jpg" width="356" height="249" alt=""><br>
@@ -203,7 +206,8 @@ Make sure firmware is at least 2.0. <br>
           ^
           in function called from system
         </code><br>
-        <a href="http://forum.espruino.com/conversations/297591/" target="http://forum.espruino.com/conversations/297591/">http://forum.espruino.com/conversations/297591/</a>
+        <a href="http://forum.espruino.com/conversations/297591/"
+          target="http://forum.espruino.com/conversations/297591/">http://forum.espruino.com/conversations/297591/</a>
       </p>
       to see what is in flash run<br>
       <code>dump()</code><br>
@@ -221,82 +225,118 @@ Make sure firmware is at least 2.0. <br>
       Remove console.log and print calls<br>
       <br>
 
+      <h3>illegal character </h3>
+      <p>
+        special hyphen allows string to go over a line, but causes error in module if minified.<br>
+        Disable minification to prevent error.
 
-  <h2>Which Espruino?</h2>
-  
-  Espruino Wifi- Wifi distorts PWM signal on A0 causing the buck converter to not function.<br>
-  
-Need an Espruino where the Wifi is not mounted to the Espruino.<br>
+      </p>
 
-Pico?<br>
-   Can be put into sleep mode with 0.02 mA power consumption<br>
-   
-<a href="http://forum.espruino.com/conversations/273005/" target="http://forum.espruino.com/conversations/273005/">http://forum.espruino.com/conversations/273005/</a>  <br>
+      <h2>Which Espruino?</h2>
 
-Add Wifi:<br>
-<a href="https://www.espruino.com/ESP8266">https://www.espruino.com/ESP8266</a><br>
+      Espruino Wifi- Wifi distorts PWM signal on A0 causing the buck converter to not function.<br>
 
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-.tg .tg-0lax{text-align:left;vertical-align:top}
-</style>
-<table class="tg">
-  <tr>
-    <th class="tg-0lax">Name</th>
-    <th class="tg-0lax">CPU</th>
-    <th class="tg-0lax">MHz</th>
-    <th class="tg-0lax">Flash</th>
-    <th class="tg-0lax">RAM</th>
-    <th class="tg-0lax">PWM</th>
-    <th class="tg-0lax">SPI</th>
-    <th class="tg-0lax">I2C</th>
-  </tr>
-  <tr>
-    <td class="tg-0lax">Espruino Wifi</td>
-    <td class="tg-0lax">STM32F411CEU6</td>
-    <td class="tg-0lax">100</td>
-    <td class="tg-0lax">512KB</td>
-    <td class="tg-0lax">128KB</td>
-    <td class="tg-0lax">20</td>
-    <td class="tg-0lax">3</td>
-    <td class="tg-0lax">3</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">Espruino Pico</td>
-    <td class="tg-0lax">STM32F401CDU6</td>
-    <td class="tg-0lax">84</td>
-    <td class="tg-0lax">384kb</td>
-    <td class="tg-0lax">96kb</td>
-    <td class="tg-0lax">21</td>
-    <td class="tg-0lax">3</td>
-    <td class="tg-0lax">3</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">Original</td>
-    <td class="tg-0lax">STM32F103RCT6</td>
-    <td class="tg-0lax">72</td>
-    <td class="tg-0lax">256KB</td>
-    <td class="tg-0lax">48KB</td>
-    <td class="tg-0lax">26</td>
-    <td class="tg-0lax">2</td>
-    <td class="tg-0lax">2</td>
-  </tr>
-</table>
-  <br>
-  <br>
-  <br>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+      Need an Espruino where the Wifi is not mounted to the Espruino.<br>
+
+      Pico?<br>
+      Can be put into sleep mode with 0.02 mA power consumption<br>
+
+      <a href="http://forum.espruino.com/conversations/273005/"
+        target="http://forum.espruino.com/conversations/273005/">http://forum.espruino.com/conversations/273005/</a>
+      <br>
+
+      Add Wifi:<br>
+      <a href="https://www.espruino.com/ESP8266">https://www.espruino.com/ESP8266</a><br>
+
+      <style type="text/css">
+        .tg {
+          border-collapse: collapse;
+          border-spacing: 0;
+        }
+
+        .tg td {
+          font-family: Arial, sans-serif;
+          font-size: 14px;
+          padding: 10px 5px;
+          border-style: solid;
+          border-width: 1px;
+          overflow: hidden;
+          word-break: normal;
+          border-color: black;
+        }
+
+        .tg th {
+          font-family: Arial, sans-serif;
+          font-size: 14px;
+          font-weight: normal;
+          padding: 10px 5px;
+          border-style: solid;
+          border-width: 1px;
+          overflow: hidden;
+          word-break: normal;
+          border-color: black;
+        }
+
+        .tg .tg-0lax {
+          text-align: left;
+          vertical-align: top
+        }
+      </style>
+      <table class="tg">
+        <tr>
+          <th class="tg-0lax">Name</th>
+          <th class="tg-0lax">CPU</th>
+          <th class="tg-0lax">MHz</th>
+          <th class="tg-0lax">Flash</th>
+          <th class="tg-0lax">RAM</th>
+          <th class="tg-0lax">PWM</th>
+          <th class="tg-0lax">SPI</th>
+          <th class="tg-0lax">I2C</th>
+        </tr>
+        <tr>
+          <td class="tg-0lax">Espruino Wifi</td>
+          <td class="tg-0lax">STM32F411CEU6</td>
+          <td class="tg-0lax">100</td>
+          <td class="tg-0lax">512KB</td>
+          <td class="tg-0lax">128KB</td>
+          <td class="tg-0lax">20</td>
+          <td class="tg-0lax">3</td>
+          <td class="tg-0lax">3</td>
+        </tr>
+        <tr>
+          <td class="tg-0lax">Espruino Pico</td>
+          <td class="tg-0lax">STM32F401CDU6</td>
+          <td class="tg-0lax">84</td>
+          <td class="tg-0lax">384kb</td>
+          <td class="tg-0lax">96kb</td>
+          <td class="tg-0lax">21</td>
+          <td class="tg-0lax">3</td>
+          <td class="tg-0lax">3</td>
+        </tr>
+        <tr>
+          <td class="tg-0lax">Original</td>
+          <td class="tg-0lax">STM32F103RCT6</td>
+          <td class="tg-0lax">72</td>
+          <td class="tg-0lax">256KB</td>
+          <td class="tg-0lax">48KB</td>
+          <td class="tg-0lax">26</td>
+          <td class="tg-0lax">2</td>
+          <td class="tg-0lax">2</td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+
+
+
+
+
+
+
+
+
+
 </body>
 
 </html>
