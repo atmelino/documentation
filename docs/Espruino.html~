@@ -189,7 +189,6 @@
       <br>
       <p>
         <h3>Connect breakout board to Espruino</h3>
-        <img src="images/EspruinoWifi_SDCard.png" width="500" height="463" alt=""><br>
         SPI Mode: <br>
         <ul>GND</ul>
         <ul>VDD</ul>
