@@ -189,6 +189,7 @@
       <br>
       <p>
         <h3>Connect breakout board to Espruino</h3>
+        <img src="images/EspruinoWifi_SDCard.png" width="500" height="463" alt=""><br>
         SPI Mode: <br>
         <ul>GND</ul>
         <ul>VDD</ul>
@@ -197,8 +198,8 @@
         <ul>SCLK Clock</ul>
         <ul>/CS Chip select (active low) </ul>
         use 100K pull-p resistor from /CS to VDD<br>
-        https://www.espruino.com/Shims#microsd-0-1-adaptor<br>
-        http://www.espruino.com/Reference#l_E_connectSDCard<br>
+        <a href="https://www.espruino.com/Shims#microsd-0-1-adaptor">https://www.espruino.com/Shims#microsd-0-1-adaptor</a><br>
+        <a href="http://www.espruino.com/Reference#l_E_connectSDCard">http://www.espruino.com/Reference#l_E_connectSDCard</a><br>
       </p>
 
       <h2>Troubleshoot</h2>
