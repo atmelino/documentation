@@ -170,6 +170,7 @@
                 target="https://www.espruino.com/File+IO">https://www.espruino.com/File+IO</a><br>
 
             Method 1: Solder Micro SD adapter to wires<br>
+            <img src="images/File_IO_wiring1.jpg" width="600" height="450" alt="">
             <img src="images/File_IO_wiring2.jpg" width="600" height="450" alt=""><br>
 
             Method 2: Use Micro SD breakout board<br>
@@ -182,7 +183,11 @@
             (yes but it's SMD)<br>
 
             Method 4: SD card connector on breakout board without additional parts<br>
+            <a href="https://www.pololu.com/product/2597">https://www.pololu.com/product/2597</a>
             <img src="images/MicroSDConnectorTHT.jpg" width="600" height="232" alt="">
+<img src="images/polulu_sd_schematic.png" width="500" height="429" alt="">            
+            
+            
             <br>
             <p>
                 <h3>Connect breakout board to Espruino</h3>
@@ -205,6 +210,7 @@
                 <code>Uncaught Error: Unable to mount media : NOT_READY</code><br>
                 it helps to unpower the Espruino and SD-card, but for a "while" (capacitors?) and then re-power it<br>
                 Perhaps power-cycling the SD-card is necessary<br>
+                Or that in combination with removing (click) and re-inserting the SD card, or reading the card in a PC)<br>
             </p>
 
             <h2>Troubleshoot</h2>
