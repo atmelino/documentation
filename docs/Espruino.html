@@ -63,6 +63,28 @@
 
 
 
+        <h2>Saving Data to Flash</h2>
+        <p>
+            The module Storage makes it possible to save data as named variables to Flash.<br>
+            <br>
+            <code> require("Storage").write("MyFile", "Some data");</code><br>
+            <code>print(require("Storage").read("MyFile"));</code><br>
+            <br>
+            Show what is stored:<br><br>
+            <code> require("Storage").list();</code><br>
+            <br>
+            To remove what is in the storage currently:<br>
+            <br>
+            <code> require('Storage').eraseAll();</code><br>
+            <br>
+            then<br><br>
+            <code> save();</code><br>
+
+        </p>
+
+
+
+
         <h2>Run Espruino directly from Battery or through Buck Converter?</h2>
         <img src="images/EspruinoWifiTopPower.jpg" width="486" height="481" alt=""><br>
         <p>
