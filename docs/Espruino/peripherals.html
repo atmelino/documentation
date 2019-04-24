@@ -1,0 +1,234 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Espruino</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        table,
+        td,
+        th {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>External Flash Memory Module</h2>
+    <a href="https://www.espruino.com/EEPROMs">https://www.espruino.com/EEPROMs</a><br>
+    <a href="http://forum.espruino.com/conversations/269195/">http://forum.espruino.com/conversations/269195/</a><br>
+    <a
+        href="https://github.com/pastaclub/espruino-w25q/blob/master/W25Q.js">https://github.com/pastaclub/espruino-w25q/blob/master/W25Q.js</a><br>
+
+    <a
+        href="https://www.thepositiverail.com/blog/debugging-spi-memory-the-winbond-w25q80bv">https://www.thepositiverail.com/blog/debugging-spi-memory-the-winbond-w25q80bv</a>
+
+    <br>
+
+    <p>
+        <h2>Winbond WQ25</h2>
+        It is organized in pages of 256 bytes each.
+        Before writing to SPI Flash, the Flash must be erased. In the case of Winbond WQ25, individual pages cannot be
+        erased-the minimum erase operation erases 16 pages at once. These page sections are:
+
+        <table>
+            <tr>
+                <td>
+                    <p>number</p>
+                </td>
+                <td>
+                    <p>start page</p>
+                </td>
+                <td>
+                    <p>end page</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>1</p>
+                </td>
+                <td>
+                    <p>0</p>
+                </td>
+                <td>
+                    <p>15</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>2</p>
+                </td>
+                <td>
+                    <p>16</p>
+                </td>
+                <td>
+                    <p>31</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>3</p>
+                </td>
+                <td>
+                    <p>32</p>
+                </td>
+                <td>
+                    <p>47</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>4</p>
+                </td>
+                <td>
+                    <p>48</p>
+                </td>
+                <td>
+                    <p>63</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>5</p>
+                </td>
+                <td>
+                    <p>64</p>
+                </td>
+                <td>
+                    <p>79</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>6</p>
+                </td>
+                <td>
+                    <p>80</p>
+                </td>
+                <td>
+                    <p>95</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>7</p>
+                </td>
+                <td>
+                    <p>96</p>
+                </td>
+                <td>
+                    <p>111</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>8</p>
+                </td>
+                <td>
+                    <p>112</p>
+                </td>
+                <td>
+                    <p>127</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>9</p>
+                </td>
+                <td>
+                    <p>128</p>
+                </td>
+                <td>
+                    <p>143</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>10</p>
+                </td>
+                <td>
+                    <p>144</p>
+                </td>
+                <td>
+                    <p>159</p>
+                </td>
+            </tr>
+        </table>
+        etc.<br>
+        Note: If you send a command to erase a section with a page number in between start and end, the section in which the page is will be erased. <br>For example:<br>
+        If you send a command to erase at page 5, then pages 0 to 15 will be erased.<br>
+
+
+
+
+
+    </p>
+
+
+
+
+
+    <h2>SD Cards</h2>
+    <p>
+
+        <a href="https://www.espruino.com/File+IO"
+            target="https://www.espruino.com/File+IO">https://www.espruino.com/File+IO</a><br>
+
+        Method 1: Solder Micro SD adapter to wires<br>
+        <img src="../images/File_IO_wiring1.jpg" width="600" height="450" alt="">
+        <img src="../images/File_IO_wiring2.jpg" width="600" height="450" alt=""><br>
+
+        Method 2: Use Micro SD breakout board<br>
+        <img src="../images/AdadfruitSDcardBoard.jpg" width="726" height="560" alt=""><br>
+        <a href="https://www.adafruit.com/product/254" target="https://www.adafruit.com/product/254"
+            name="https://www.adafruit.com/product/254"></a><br>
+
+        Method 3: SD card connector on PCB<br>
+        <img src="images/SDcardConnectorSMD.jpg" width="356" height="249" alt=""><br>
+        (yes but it's SMD)<br>
+
+        Method 4: SD card connector on breakout board without additional parts<br>
+        <a href="https://www.pololu.com/product/2597">https://www.pololu.com/product/2597</a><br>
+        <img src="../images/MicroSDConnectorTHT.jpg" width="600" height="232" alt="">
+        <img src="../images/polulu_sd_schematic.png" width="500" height="429" alt="">
+
+
+        <br>
+        <p>
+            <h3>Connect breakout board to Espruino</h3>
+            <img src="../images/EspruinoWifi_SDCard.png" width="500" height="463" alt=""><br>
+            SPI Mode: <br>
+            <ul>GND</ul>
+            <ul>VDD</ul>
+            <ul>DI Data in = MOSI</ul>
+            <ul>DO Data out = MISO</ul>
+            <ul>SCLK Clock</ul>
+            <ul>/CS Chip select (active low) </ul>
+            use 100K pull-p resistor from /CS to VDD<br>
+            Note: It is important to use a 100K resistor as pull-up, a 10K resistor did not work!<br>
+            <a
+                href="http://www.espruino.com/Reference#l_E_connectSDCard">http://www.espruino.com/Reference#l_E_connectSDCard</a><br>
+            <a
+                href="https://www.espruino.com/Shims#microsd-0-1-adaptor">https://www.espruino.com/Shims#microsd-0-1-adaptor</a><br>
+            <br>
+            It seems like when you get the error<br>
+            <code>Uncaught Error: Unable to mount media : NOT_READY</code><br>
+            it helps to unpower the Espruino and SD-card, but for a "while" (capacitors?) and then re-power it<br>
+            Perhaps power-cycling the SD-card is necessary<br>
+            Or that in combination with removing (click) and re-inserting the SD card, or reading the card in a
+            PC)<br>
+        </p>
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+
+    <h2>Troubleshoot</h2>
+    <h3>ERROR: Prompt not detected - upload failed. Trying to recover...</h3>
+
+    http://forum.espruino.com/conversations/289212/
+
+    <h3>Instability</h3>
+    If a lot of extra circuitry is connected to the Espruino, it is possible that the USB power is not
+    sufficient to power everything and the Espruino runs unstable, giving intermittent errors. Connect a
+    separate 3.3 V power supply to pin 3.
+
+    <h3>SD card reinsert</h3>
+    <p>
+        <a href="http://forum.espruino.com/conversations/253121/">http://forum.espruino.com/conversations/253121/</a>
+    </p>
+
+    <h3>Problems after save()</h3>
+    <p>
+        Error message:<br>
+        <code>
+                Uncaught SyntaxError: Got ?[255] expected EOF
+                at line 1 col 1
+                ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255]
+                ?[255]
+                ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255] ?[255]
+                ^
+                in function called from system
+            </code><br>
+        <a href="http://forum.espruino.com/conversations/297591/"
+            target="http://forum.espruino.com/conversations/297591/">http://forum.espruino.com/conversations/297591/</a>
+    </p>
+    to see what is in flash run<br>
+    <code>dump()</code><br>
+    To clear<br>
+    <code>reset()</code><br>
+    <code>E.setBootCode()</code><br>
+    <code>save()</code><br>
+    Then test with<br>
+    <code>dump()</code><br>
+    and change <br>
+    Save on Send Direct to Flash<br>
+    to<br>
+    Save on Send To RAM (Default)<br>
+    <h3>Program runs in Web IDE but stalls as stand-alone</h3>
+    Remove console.log and print calls<br>
+    <br>
+
+    <h3>illegal character </h3>
+    <p>
+        special hyphen allows string to go over a line, but causes error in module if minified.<br>
+        Disable minification to prevent error.
+
+    </p>
+
+</body>
+
+</html>
