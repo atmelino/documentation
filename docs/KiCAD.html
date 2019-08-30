@@ -4,58 +4,35 @@
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
 	<title>KiCAD</title>
+	<script src="toc.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="article.css" type="text/css" />
+	<style type="text/css">
+		/* <![CDATA[ */
+		div.pseudocode {
+			background-color: whitesmoke;
+			border: 1px dashed black;
+			padding: 1em 1em 1em 3em;
+		}
+
+		div.pseudocode div {
+			margin-left: 2em;
+			text-indent: -4em;
+		}
+
+		/* ]]> */
+	</style>
 </head>
 
-<body lang="en-US" link="#000080" vlink="#800000" dir="ltr">
-	<p>
-		<br /></p>
-	<div id="Table of Contents1" dir="ltr">
-		<div id="Table of Contents1_Head" dir="ltr">
-			<p style="margin-top: 0.17in; margin-bottom: 0.08in; line-height: 100%; page-break-after: avoid">
-				<font face="Liberation Sans, sans-serif">
-					<font size="4" style="font-size: 16pt"><b>Table
-							of Contents</b></font>
-				</font>
-			</p>
-		</div>
-		<p><a href="#__RefHeading___Toc592_3679804821">Overview 1</a></p>
-		<p><a href="#__RefHeading___Toc599_3679804821">Installation 1</a></p>
-		<p><a href="#__RefHeading___Toc601_3679804821">Steps 2</a></p>
-		<p style="margin-left: 0.2in; margin-bottom: 0in; line-height: 100%">
-			<a href="#__RefHeading___Toc603_3679804821">Circuit Design 2</a></p>
-		<p style="margin-left: 0.2in; margin-bottom: 0in; line-height: 100%">
-			<a href="#__RefHeading___Toc605_3679804821">Board Design 4</a></p>
-		<p style="margin-left: 0.2in; margin-bottom: 0in; line-height: 100%">
-			<a href="#__RefHeading___Toc397_409030793">Autorouter 4</a></p>
-		<p style="margin-left: 0.2in; margin-bottom: 0in; line-height: 100%">
-			<a href="#__RefHeading___Toc743_87706915">Export Board Design 5</a></p>
-		<p style="margin-left: 0.2in; margin-bottom: 0in; line-height: 100%">
-			<a href="#__RefHeading___Toc609_3679804821">Generate G-Code 8</a></p>
-		<p style="margin-left: 0.2in; margin-bottom: 0in; line-height: 100%">
-			<a href="#__RefHeading___Toc611_3679804821">Autolevel 11</a></p>
-		<p style="margin-left: 0.2in; margin-bottom: 0in; line-height: 100%">
-			<a href="#__RefHeading___Toc613_3679804821">Mill PCB 12</a></p>
-		<p><a href="#__RefHeading___Toc615_3679804821">Appendix 12</a></p>
-		<p style="margin-left: 0.2in; margin-bottom: 0in; line-height: 100%">
-			<a href="#__RefHeading___Toc403_409030793">Freerouting rules 12</a></p>
-		<p style="margin-left: 0.2in; margin-bottom: 0in; line-height: 100%">
-			<a href="#__RefHeading___Toc607_3679804821">How to make a single
-				sided board, only back? 15</a></p>
-		<p style="margin-left: 0.2in; margin-bottom: 0in; line-height: 100%">
-			<a href="#__RefHeading___Toc789_1301748737">KiCAD clone a
-				footprint 16</a></p>
-		<p style="margin-left: 0.2in; margin-bottom: 0in; line-height: 100%">
-			<a href="#__RefHeading___Toc792_1301748737">KiCAD pcbnew create
-				board edge 17</a></p>
-		<p style="margin-left: 0.2in; margin-bottom: 0in; line-height: 100%">
-			<a href="#__RefHeading___Toc987_1702605188">KiCAD clone pad
-				properties 17</a></p>
-	</div>
+
+<body onload="generateTOC(document.getElementById('toc'));">
+
+	<h2>Table of Contents</h2>
+	<div id="toc"></div>
+
 	</p>
-	<h1 class="western"><a name="__RefHeading___Toc592_3679804821"></a>Overview</h1>
+	<h2>Overview</h2>
 	</p>
-	<p>The entire process of creating a printed circuit board with isolation milling is
-		described.</p>
+	<p>The entire process of creating a printed circuit board with isolation milling is described.</p>
 	<p>The operating system is Ubuntu 18.04</p>
 	</p>
 	<p>Steps:</p>
@@ -65,18 +42,16 @@
 	<p>Autoleveller AE</p>
 	<p>cnc.js</p>
 	</p>
-	<h1 class="western"><a name="__RefHeading___Toc599_3679804821"></a>Installation</h1>
+	<h2>Installation</h2>
 	<p>KiCAD 5:</p>
 	<p><a href="http://kicad-pcb.org/download/ubuntu/">http://kicad-pcb.org/download/ubuntu/</a></p>
 	</p>
 	<p>freeRouting.jar</p>
-	<p>source:
-		<a
+	<p>source: <a
 			href="https://github.com/nikropht/FreeRouting/tree/master/gui">https://github.com/nikropht/FreeRouting/tree/master/gui</a>
 	</p>
-	</p>
 
-	<h2>KiCAD Configuration </h2>
+	<h2>KiCAD Configuration and Usage</h2>
 
 	<p> using your previously created user libraries for symbols:
 		<br> open symbol library editor
@@ -89,119 +64,122 @@
 		<br>click on browse libraries and find your Library
 	</p>
 
+	<h3>EESchema (Schematics Editor)</h3>
+	<h4>Remove Title</h4>
+	<p>Zooming in with the title section enabled makes it difficult to see the diagram when zooming to fit page.</p>
+	<p>File→ Page Settings</p>
+	<p>Page layout description file:</p>
+	<p>empty.kicad_wks</p>
+	<p><img src="images/toolchain_html_ad3847e49f29a4ba.png" name="Image3" align="bottom" width="665" height="486"
+			border="0" />
+	</p>
+	<p>then change page size to smaller</p>
+	<p><img src="images/toolchain_html_b9cea8eea548db6e.png" name="Image4" align="bottom" width="312" height="175"
+			border="0" />
+	</p>
+	<h4>Panning</h4>
+	<p>to pan: press and hold F4</p>
+	<p>move the mouse </p>
 
 
+	<h3>PCBnew (Layout Editor)</h3>
 	<p>
 		Disable red frame with title:<br>
 		https://forum.kicad.info/t/how-to-disable-red-frame-with-title-etc/11511/2
 		deselecting the ‘worksheet’ box in the render panel.
-
 	</p>
-
-
-	<h1 class="western"><a name="__RefHeading___Toc601_3679804821"></a>Steps</h1>
+	<h4>Create PCB Edge for Cutting</h4>
 	</p>
-	<h2 class="western"><a name="__RefHeading___Toc603_3679804821"></a>Circuit
-		Design</h2>
-	</p>
-	<p><a name="__RefHeading___Toc393_409030793"></a>Open KiCAD EESchema
-		(Schematics Editor)</p>
-	</p>
-	<p>to pan: press and
-		hold F4</p>
-	<p>move the mouse
-	</p>
-	</p>
-	<p>zooming in with the
-		title section enabled makes it diffuclt to see the diagram when
-		zooming to fit page.</p>
-	</p>
-	<p>File→ Page
-		Settings</p>
-	<p>Page layout
-		description file:</p>
-	</p>
-	<p>empty.kicad_wks</p>
-	</p>
-	<p><img src="images/toolchain_html_ad3847e49f29a4ba.png" name="Image3" align="bottom" width="665" height="486"
+	<p>In layout manager, select edge.cuts</p>
+	<p>(blue triangle)</p>
+	<p><img src="images/toolchain_html_14e4bcd4eb27f2cf.png" name="Image10" align="bottom" width="163" height="49"
 			border="0" />
 	</p>
+	<p>Use Add graphic lines to draw board edge</p>
 	</p>
-	<p>then change page
-		size to smaller</p>
-	</p>
-	<p><img src="images/toolchain_html_b9cea8eea548db6e.png" name="Image4" align="bottom" width="312" height="175"
+
+	<h4>Create your own library</h4>
+	In main program:<br>
+	click on Symbol library editor<br>
+	Click on File -> New Library<br>
+	Click on Preferences -> Manage Symbol libraries<br>
+	On Global Libraries, Append your library<br>
+
+	<h4>Clone a footprint</h4>
+	<p>Open footprint editor</p>
+	<p>File → Open Footprint</p>
+	<p>modify footprint as needed</p>
+	<p>File → Save </p>
+	<p>Save in Library allows to choose new library to save in</p>
+	<p><img src="images/toolchain_html_86bb17f3c2ef5d8b.png" name="Image9" align="bottom" width="612" height="421"
 			border="0" />
 	</p>
+	<h4>Convert board to footprint</h4>
+	<a
+		href="https://forum.kicad.info/t/converting-board-to-footprint/2781">https://forum.kicad.info/t/converting-board-to-footprint/2781</a><br>
+	<a
+		href="http://linuxg.net/how-to-install-freecad-0-17-on-ubuntu-18-10-ubuntu-18-04-and-derivative-systems/">http://linuxg.net/how-to-install-freecad-0-17-on-ubuntu-18-10-ubuntu-18-04-and-derivative-systems/</a><br>
+
+
+	<h3>Footprint Editor</h3>
+	<h4>KiCAD clone pad properties</h4>
+	<p>-Right click on the modified pad -&gt; Pads-&gt;Copy pad settings</p>
+	<p>-Right click on a NON-modified pad you want to modify -&gt;Pads -&gt;
+		Apply (or Push for several) pad settings</p>
+	<p><a
+			href="https://forum.kicad.info/t/how-do-you-edit-several-pads-at-once-in-footprint-editor/9209">https://forum.kicad.info/t/how-do-you-edit-several-pads-at-once-in-footprint-editor/9209</a>
+	</p>
+
+
+
+	<h2>Steps for Creating a PCB</h2>
+	</p>
+	<h3>Circuit Design</h3>
+	</p>
+	<p>Open KiCAD EESchema (Schematics Editor)</p>
 	</p>
 	<p>Import Parts</p>
-	</p>
 	<p>snapEDA</p>
-	</p>
-	<p>click on generate
-		net list</p>
-	</p>
-	<h2 class="western"><a name="__RefHeading___Toc605_3679804821"></a>Board
-		Design</h2>
-	<p><a name="__RefHeading___Toc395_409030793"></a>Open KiCAD Pcbnew</p>
+	<p>click on generate net list</p>
+	<h3>Board Design</h3>
+	<p>Open KiCAD Pcbnew</p>
 	<p>load net list</p>
 	</p>
-	<p><a name="__RefHeading___Toc594_3679804821"></a>Trace width and
-		spacing</p>
-	<p><br />
-		<br /></p>
-	</p>
-	<p>In the process of
-		routing the traces, you may need to delete the existing traces.</p>
-	</p>
-	<p>To delete all
-		traces:</p>
-	</p>
-	<p>Edit → Global
-		Deletions</p>
-	</p>
-	<h2 class="western"><a name="__RefHeading___Toc397_409030793"></a>Autorouter</h2>
+	<p>Trace width and spacing</p>
+	<p>In the process of routing the traces, you may need to delete the existing traces.</p>
+	<p>To delete all traces:</p>
+	<p>Edit → Global Deletions</p>
+	<h3>Autorouter</h3>
 	</p>
 	<ul>
 		<li>
-			<p>KiCAD Pcbnew
-				export DSN Specctra</p>
+			<p>KiCAD Pcbnew export DSN Specctra</p>
 		<li>
-			<p>freerouting
-				import</p>
+			<p>freerouting import</p>
 		<li>
 			<p>autoroute</p>
 		<li>
-			<p>export Specctra
-				session file</p>
+			<p>export Specctra session file</p>
 		<li>
-			<p>KiCAD Pcbnew
-				import session file</p>
+			<p>KiCAD Pcbnew import session file</p>
 	</ul>
 	</p>
-	<p>Note: When you
-		change rules in KiCAD, those are not considered unless you first
-		delete the rules file in freerouting.</p>
+	<p>Note: When you change rules in KiCAD, those are not considered unless you first delete the rules file in
+		freerouting.</p>
 	<p>batterymonitor.rules</p>
 	</p>
 	<p><img src="images/toolchain_html_bf695de12f613275.png" name="Image5" align="bottom" width="665" height="460"
 			border="0" />
 	</p>
 	</p>
-	<p>FreeRouting opens a
-		file chooser in the user’s home directory. This adds extra steps
-		every time a design is changed. Improvement?</p>
+	<p>FreeRouting opens a file chooser in the user’s home directory. This adds extra steps every time a design is
+		changed. Improvement?</p>
 	</p>
-	<p>cp
-		batterymonitor.dsn ~</p>
-	<p>java -jar
-		../../../../../../applications/freeRouting/freeRouting.jar
-		batterymonitor.dsn</p>
-	<p>cp
-		~/batterymonitor.ses .</p>
+	<p>cp batterymonitor.dsn ~</p>
+	<p>java -jar ../../../../../../applications/freeRouting/freeRouting.jar batterymonitor.dsn</p>
+	<p>cp ~/batterymonitor.ses .</p>
 	</p>
-	<h2 class="western"><a name="__RefHeading___Toc743_87706915"></a>Export
-		Board Design</h2>
+	<h3>Export Board Design</h3>
 	</p>
 	<p>Open KiCAD pcbnew.</p>
 	</p>
@@ -210,89 +188,58 @@
 			border="0" />
 	</p>
 	</p>
-	<p>generate a single
-		drill hole file:</p>
+	<p>generate a single drill hole file:</p>
 	</p>
-	<p><img src="images/toolchain_html_934199f8bf46eac7.png" name="Image2" align="bottom" width="665" height="544"
-			border="0" />
+	<p><img src="images/toolchain_html_934199f8bf46eac7.png" name="Image2" align="bottom" width="665"
+			height="544 border=" 0" />
 	</p>
 	<p><a
 			href="http://support.seeedstudio.com/knowledgebase/articles/1824574-how-to-generate-gerber-and-drill-files-from-kicad">http://support.seeedstudio.com/knowledgebase/articles/1824574-how-to-generate-gerber-and-drill-files-from-kicad</a>
 	</p>
-	</p>
-	<h2 class="western"><br />
-		<br />
-
-	</h2>
-	<h2 class="western" style="page-break-before: always"><a name="__RefHeading___Toc609_3679804821"></a>
-		Generate G-Code</h2>
-	<p><a name="__RefHeading___Toc401_409030793"></a>Open pcb2gcodeGUI</p>
+	<h3>Generate G-Code</h3>
+	<p> Open pcb2gcodeGUI</p>
 	</p>
 	<p>Input/output tab:</p>
-	<p>add front gcode so
-		that mounting holes are drilled</p>
-	<p>add back gcode with
-		actual traces</p>
-	<p>add outline so that
-		autoleveller knows offset from board edge for probing grid</p>
+	<p>add front gcode so that mounting holes are drilled</p>
+	<p>add back gcode with actual traces</p>
+	<p>add outline so that autoleveller knows offset from board edge for probing grid</p>
 	<p>add drill file</p>
-	</p>
 	<p><img src="images/toolchain_html_ebe1e65bacd06209.png" name="Image11" align="bottom" width="665" height="479"
 			border="0" />
 	</p>
-	</p>
 	<p>Common tab:</p>
 	</p>
-	<p>Change Movement
-		height to 2 mmm</p>
-	<p>Remove G64 (to
-		prevent error in GRBL)</p>
+	<p>Change Movement height to 2 mmm</p>
+	<p>Remove G64 (to prevent error in GRBL)</p>
 	</p>
 	<p><img src="images/toolchain_html_7f22b9464ae1a2fb.png" name="Image13" align="bottom" width="665" height="452"
 			border="0" />
 	</p>
-	</p>
 	<p>Drill tab:</p>
-	<p>set “board side
-		for drilling” to back (same as traces)</p>
-	<p>check single drill
-		bit size to reduce tool change</p>
-	<p>check “Remove G81”
-		because GRBL and TinyG do not support canned cycles</p>
+	<p>set “board side for drilling” to back (same as traces)</p>
+	<p>check single drill bit size to reduce tool change</p>
+	<p>check “Remove G81” because GRBL and TinyG do not support canned cycles</p>
 	</p>
 	<p><img src="images/toolchain_html_1b4cbcb912f51399.png" name="Image12" align="bottom" width="665" height="479"
 			border="0" />
 	</p>
-	</p>
-	<h2 class="western"><br />
-		<br />
-
-	</h2>
-	<h2 class="western" style="page-break-before: always"><a name="__RefHeading___Toc611_3679804821"></a>
-		Autolevel</h2>
+	<h3>Autolevel</h3>
 	</p>
 	<ul>
 		<li>
-			<p>import your PCB
-				gcode into Autoleveller AE</p>
+			<p>import your PCB gcode into Autoleveller AE</p>
 		<li>
-			<p>generate
-				probing gcode with Probe File Generator</p>
+			<p>generate probing gcode with Probe File Generator</p>
 		<li>
-			<p>run probe file
-				in cnc.js</p>
+			<p>run probe file in cnc.js</p>
 		<li>
-			<p>save probing
-				results as Raw Probe File</p>
+			<p>save probing results as Raw Probe File</p>
 		<li>
-			<p>load Raw Probe
-				File in Autoleveller AE</p>
+			<p>load Raw Probe File in Autoleveller AE</p>
 		<li>
-			<p>generate
-				autolevelled PCB gcode</p>
+			<p>generate autolevelled PCB gcode</p>
 		<li>
-			<p>run
-				autolevelled PCB gcode on your PCB in cnc.js.</p>
+			<p>run autolevelled PCB gcode on your PCB in cnc.js.</p>
 			<p></p>
 	</ul>
 	</p>
@@ -300,141 +247,58 @@
 			border="0" />
 	</p>
 	</p>
-	<p>If the physical PCB
-		is exactly the size of the designed board, enter insets so that the
-		probing does not start at the edge of the board.</p>
+	<p>If the physical PCB is exactly the size of the designed board, enter insets so that the probing does not start at
+		the edge of the board.</p>
 	</p>
-	<p>The probing grid
-		file that is generated by Autoleveller does not work unedited with
-		cnc.js.</p>
-	<p>Simply remove the
-		initial comment section.</p>
+	<p>The probing grid file that is generated by Autoleveller does not work unedited with cnc.js.</p>
+	<p>Simply remove the initial comment section.</p>
 	</p>
-	<h2 class="western"><a name="__RefHeading___Toc613_3679804821"></a>Mill
-		PCB</h2>
+	<h3>Mill PCB</h3>
 	</p>
 	<p>open cnc.js</p>
 	</p>
 	<p>load gcode
 	</p>
 	</p>
-	<p>&gt; G64 P0.01000 (
-		set maximum deviation from commanded toolpath ) (line=26)</p>
-	<p>error:20
-		(Unsupported command)</p>
+	<p>&gt; G64 P0.01000 ( set maximum deviation from commanded toolpath ) (line=26)</p>
+	<p>error:20 (Unsupported command)</p>
 	</p>
 	<p>ALARM:1 (Hard limit)</p>
-	<p>[MSG:Reset to
-		continue]</p>
+	<p>[MSG:Reset to continue]</p>
 	<p>perhaps electrical
 		issue?</p>
-	<p>just disable hard
-		limits</p>
+	<p>just disable hard limits</p>
 	</p>
 	<p>$21=0</p>
 	</p>
-	<p>Sometimes program
-		gets stuck at the end and can only be unlocked by resetting Arduino,
-		which is a problem because zero position gets lost.</p>
-	<p>Solution: Add M0 at
-		the end of the program. When it is reached, don’t continue but</p>
-	<p>Instead, move
-		spindle to zero x and y.</p>
+	<p>Sometimes program gets stuck at the end and can only be unlocked by resetting Arduino which is a problem because
+		zero position gets lost.</p>
+	<p>Solution: Add M0 at the end of the program. When it is reached, don’t continue but</p>
+	<p>Instead, move spindle to zero x and y.</p>
 	<p>Then stop program.</p>
 	</p>
-	<h1 class="western"><a name="__RefHeading___Toc615_3679804821"></a>Appendix</h1>
+	<h2>Appendix</h2>
 	</p>
-	<h2 class="western"><a name="__RefHeading___Toc403_409030793"></a>Freerouting
-		rules File</h2>
-	</p>
+	<h3>Freerouting Rules File</h3>
 	<a href="data/batterymonitor.rules">data/batterymonitor.rules</a>
-	 
 
-	<h2 class="western" style="page-break-before: always"><a name="__RefHeading___Toc607_3679804821"></a>
-		How to make a single sided board, only back?</h2>
+
+	<h3>How to make a single sided board, only back?</h3>
 	</p>
-	<p>In Pcbnew: Setup →
-		Layers Setup</p>
+	<p>In Pcbnew: Setup → Layers Setup</p>
 	</p>
 	<p><img src="images/toolchain_html_6f853dcc135b89f0.png" name="Image6" align="bottom" width="404" height="388"
 			border="0" />
 	</p>
 	</p>
 	<p>In freeRouting:</p>
-	<p>Utilities →
-		Parameter → Autoroute</p>
+	<p>Utilities → Parameter → Autoroute</p>
 	</p>
 	<p><img src="images/toolchain_html_f953bbeefeace972.png" name="Image7" align="bottom" width="252" height="237"
 			border="0" />
 	</p>
 	</p>
-	<h2 class="western"><a name="__RefHeading___Toc789_1301748737"></a>KiCAD
-		clone a footprint</h2>
-	</p>
-	<p>Open footprint
-		editor</p>
-	</p>
-	<p>File → Open
-		Footprint</p>
-	</p>
-	<p>modify footprint as
-		needed</p>
-	</p>
-	<p>File → Save
-	</p>
-	</p>
-	<p>Save in Library
-		allows to choose new library to save in</p>
-	</p>
-	<p><img src="images/toolchain_html_86bb17f3c2ef5d8b.png" name="Image9" align="bottom" width="612" height="421"
-			border="0" />
-	</p>
-	</p>
-	<h2 class="western"><a name="__RefHeading___Toc792_1301748737"></a>KiCAD
-		pcbnew create board edge</h2>
-	</p>
-	<p>In layout manager,
-		select edge.cuts</p>
-	</p>
-	<p>(blue triangle)</p>
-	</p>
-	<p><img src="images/toolchain_html_14e4bcd4eb27f2cf.png" name="Image10" align="bottom" width="163" height="49"
-			border="0" />
-	</p>
-	</p>
-	<p>Use Add graphic
-		lines to draw board edge</p>
-	</p>
-	<h2 class="western"><a name="__RefHeading___Toc987_1702605188"></a>KiCAD
-		clone pad properties</h2>
-	<p><br />
-		<br /></p>
-	<p>-Right click on the modified pad -&gt; Pads-&gt;Copy pad settings</p>
-	<p>-Right click on a NON-modified pad you want to modify -&gt;Pads -&gt;
-		Apply (or Push for several) pad settings</p>
-	<p><br />
-		<br /></p>
-	<p><a
-			href="https://forum.kicad.info/t/how-do-you-edit-several-pads-at-once-in-footprint-editor/9209">https://forum.kicad.info/t/how-do-you-edit-several-pads-at-once-in-footprint-editor/9209</a>
-	</p>
-	<p><br />
-		<br />
-	</p>
 
-	<h2 class="western"><a name="__RefHeading___Toc987_1702605188"></a>KiCAD
-		convert board to footprint</h2>
-	<a
-		href="https://forum.kicad.info/t/converting-board-to-footprint/2781">https://forum.kicad.info/t/converting-board-to-footprint/2781</a><br>
-	<a
-		href="http://linuxg.net/how-to-install-freecad-0-17-on-ubuntu-18-10-ubuntu-18-04-and-derivative-systems/">http://linuxg.net/how-to-install-freecad-0-17-on-ubuntu-18-10-ubuntu-18-04-and-derivative-systems/</a><br>
-
-
-	<h2>Create your own library</h2>
-	In main program:<br>
-	click on Symbol library editor<br>
-	Click on File -> New Library<br>
-	Click on Preferences -> Manage Symbol libraries<br>
-	On Global Libraries, Append your library<br>
 
 
 </body>
